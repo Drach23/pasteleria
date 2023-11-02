@@ -106,7 +106,7 @@ header .logo h1 a{
 
 /*:::::contenido del landing page:::::*/
 .container .imgCover {
-  background-image: url(../IMG/cover/cover.jpg);
+  background-image: url(../img/cover/cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
