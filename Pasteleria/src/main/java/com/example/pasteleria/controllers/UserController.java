@@ -16,12 +16,14 @@ public class UserController {
     //get
     @GetMapping()
     public ArrayList<UserModel> findAllUsers(){
+
         return userService.findAllUsers();
     }
 
     //post
     @PostMapping()
     public UserModel saveUser(@RequestBody UserModel user){
+
         return userService.saveUser(user);
     }
 }
