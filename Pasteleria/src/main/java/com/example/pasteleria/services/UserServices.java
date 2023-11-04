@@ -18,6 +18,7 @@ public class UserServices {
     //Guardar un usuario
 
     public UserModel  saveUser(UserModel user){
+
         return userRepository.save(user);
     }
 }
