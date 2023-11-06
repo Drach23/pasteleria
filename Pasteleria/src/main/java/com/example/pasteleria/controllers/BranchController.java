@@ -20,7 +20,7 @@ public class BranchController {
         return branchServices.findAllBranches();
     }
     //post
-    @PostMapping
+    @PostMapping()
     public BranchModel saveBranch(@RequestBody BranchModel branch){
         return branchServices.saveBranch(branch);
     }

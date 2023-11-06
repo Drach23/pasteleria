@@ -12,7 +12,7 @@ public class BranchModel {
     private String nombre;
     private String email;
     private String telefono;
-    private String estado;
+    private String estadoOperativo;
 
     //setter y getters
     public Integer getId() {
@@ -47,11 +47,13 @@ public class BranchModel {
         this.telefono = telefono;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getEstadoOperativo() {
+
+        return estadoOperativo;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstadoOperativo(String estadoOperativo) {
+
+        this.estadoOperativo = estadoOperativo;
     }
 }
