@@ -11,9 +11,8 @@ public class ProductModel {
     private Integer id;
     private String nombre;
     private float precio;
-    /*@ManyToOne
+    @ManyToOne
     @JoinColumn(name = "idCategoria")
     private CategoryModel categoria;
-     */
-    private Integer idCategoria;
+
 }
