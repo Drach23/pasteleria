@@ -8,7 +8,7 @@ public class ProductModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,unique = true)
-    private Integer id;
+    private Long id;
     private String nombre;
     private float precio;
     @ManyToOne

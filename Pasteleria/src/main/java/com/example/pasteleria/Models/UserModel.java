@@ -8,7 +8,7 @@ public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,unique = true)
-    private Integer id;
+    private Long id;
     private String nombre;
     private String apellido;
     private String email;
@@ -16,11 +16,11 @@ public class UserModel {
 
     //setters y getters
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -21,7 +21,7 @@ public class ReviewModel {
     @JoinColumn(name = "idProductReview")
     private ProductModel product;
 
-    private short calificacion;
+    private Integer calificacion;
     private String comentario;
     private Date fechaCreacion;
 
@@ -50,11 +50,11 @@ public class ReviewModel {
         this.product = product;
     }
 
-    public short getCalificacion() {
+    public Integer getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(short calificacion) {
+    public void setCalificacion(Integer calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -76,23 +76,23 @@ public class ReviewModel {
 
     @Embeddable
     public static class ReviewModelId implements Serializable {
-        private Integer userId;
-        private Integer productId;
+        private Long userId;
+        private Long productId;
 
         // Constructores, getters y setters
-        public Integer getUserId() {
+        public Long getUserId() {
             return userId;
         }
 
-        public void setUserId(Integer userId) {
+        public void setUserId(Long userId) {
             this.userId = userId;
         }
 
-        public Integer getProductId() {
+        public Long getProductId() {
             return productId;
         }
 
-        public void setProductId(Integer productId) {
+        public void setProductId(Long productId) {
             this.productId = productId;
         }
     }

@@ -1,10 +1,9 @@
 package com.example.pasteleria.repositories;
 
-import com.example.pasteleria.Models.ProductModel;
+import com.example.pasteleria.Models.AccessoryModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepository extends CrudRepository<ProductModel,Long> {
-
+public interface AccesoryRepository extends CrudRepository<AccessoryModel,Long> {
 }

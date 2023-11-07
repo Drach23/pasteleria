@@ -8,18 +8,18 @@ public class BranchModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,unique = true)
-    private Integer id;
+    private Long id;
     private String nombre;
     private String email;
     private String telefono;
     private String estadoOperativo;
 
     //setter y getters
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
