@@ -26,6 +26,8 @@ public class ReviewModel {
     private Date fechaCreacion;
 
     //getters y setters
+
+
     public ReviewModelId getId() {
         return id;
     }
@@ -80,6 +82,7 @@ public class ReviewModel {
         private Long productId;
 
         // Constructores, getters y setters
+
         public Long getUserId() {
             return userId;
         }
