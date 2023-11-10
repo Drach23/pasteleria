@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Table(name = "accesorioProducto")
 public class AccessoryProductModel {
     @EmbeddedId
-    private AccesoryProductModelId id;
+    private AccessoryProductModelId id;
 
     @ManyToOne
     @MapsId("orderId")
@@ -25,11 +25,11 @@ public class AccessoryProductModel {
     @JoinColumn(name = "accesorioId")
     private AccessoryModel accesory;
 
-    public AccesoryProductModelId getId() {
+    public AccessoryProductModelId getId() {
         return id;
     }
 
-    public void setId(AccesoryProductModelId id) {
+    public void setId(AccessoryProductModelId id) {
         this.id = id;
     }
 
@@ -58,7 +58,7 @@ public class AccessoryProductModel {
     }
 
     @Embeddable
-    public static class AccesoryProductModelId implements Serializable {
+    public static class AccessoryProductModelId implements Serializable {
         private Long orderId;
         private Long productId;
         private Long AccesoryId;

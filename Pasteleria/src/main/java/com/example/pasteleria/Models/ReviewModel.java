@@ -12,13 +12,11 @@ public class ReviewModel {
     private ReviewModelId id;
 
     @ManyToOne
-    @MapsId("userId") // Mapeo de la clave foránea a la clave primaria compuesta
-    @JoinColumn(name = "idUserReview")
+    @JoinColumn(name = "idUserReview", insertable = false, updatable = false)
     private UserModel usuario;
 
     @ManyToOne
-    @MapsId("productId") // Mapeo de la clave foránea a la clave primaria compuesta
-    @JoinColumn(name = "idProductReview")
+    @JoinColumn(name = "idProductReview", insertable = false, updatable = false)
     private ProductModel product;
 
     private Integer calificacion;
@@ -78,7 +76,10 @@ public class ReviewModel {
 
     @Embeddable
     public static class ReviewModelId implements Serializable {
+        @Column(name = "idUserReview")
         private Long userId;
+
+        @Column(name = "idProductReview")
         private Long productId;
 
         // Constructores, getters y setters
