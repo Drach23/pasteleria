@@ -1,6 +1,7 @@
 package com.example.pasteleria.Models;
 
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
 @Table(name = "usuario")

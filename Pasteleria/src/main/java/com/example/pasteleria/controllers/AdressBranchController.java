@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/BranchAdress")
+@RequestMapping("/direccionSucursal")
 public class AdressBranchController {
     @Autowired
     AdressBranchServices adressBranchService;
