@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/accesory")
+@RequestMapping("/accessory")
 public class AccesoryController {
     @Autowired
     AccessoryServices accesoryService;

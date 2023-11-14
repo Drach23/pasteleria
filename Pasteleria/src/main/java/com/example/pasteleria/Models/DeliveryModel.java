@@ -13,14 +13,14 @@ public class DeliveryModel {
     @Column(nullable = false,unique = true)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "idPedido")
+    @JoinColumn(name = "id_pedido")
     private OrderModel order;
 
     private String status;
     private Date fechaEntrega;
     private Time horaEntrega;
     @ManyToOne
-    @JoinColumn(name = "idUserAdress")
+    @JoinColumn(name = "id_user_adress")
     private AdressUserModel adressUser;
 
     public Long getId() {
