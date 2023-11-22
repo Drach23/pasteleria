@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Sacramento&display=swap');
+
+
+/*:::::Page Formatting:::::*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+body {
+    background-color: rgb(96, 18, 10);
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+/*:::::Header Styles:::::*/
+.header {
+    background-color: rgb(90, 9, 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+header .logo h1 a{
+    cursor: pointer;
+    font-family:'Sacramento',cursive;
+    font-size: 40px;
+    color:white;
+    pointer-events:painted;
+    user-select: none;
+    text-decoration: none;
+}
+
+.header .logo img {
+    height: 80px;
+    width: auto;
+}
+
+.header .logo:hover {
+    transform: scale(1.2);
+}
+
+
+.header .navLinks li {
+    display: inline-block;
+    padding: 0 20px;
+    user-select: none;
+}
+
+.header .navLinks li:hover {
+    transform: scale(1.1);
+}
+
+.header .navLinks a {
+    font-size: 26px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.header .navLinks li a:hover {
+    color: #ffbc0f;
+}
+
+.header .btn button {
+    font-weight: bold;
+    color: #1b3039;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: #eceff1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header .btn button:hover {
+    background-color: #e2f1f8;
+    color: #ffbc0f;
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+}
+
+/*::::::::::formulario::::::::::*/
+
+.form-container{
+    width: 60%;
+}
+
+.imgBox{
+    text-align: center;
+}
+
+.user-image{
+    width: 100px;
+    height: auto;
+}
+
+.formLogin{
+    width: 400px;
+    background:rgb(51,3,0);
+    padding: 35px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    margin-bottom: 100px;
+}
+
+.formLogin .formTittle h4{
+    font-family: 'mulish';
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.formLogin h4{
+    font-family: 'mulish';
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.controls{
+    width: 100%;
+    background: rgb(243, 240, 240);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #010613;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+.controls select{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.formLogin .buttons{
+    width: 100%;
+    background: rgb(148, 30, 3);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+.formLogin .buttons:active{
+    background:rgb(15, 73, 75);
+}
+
+.signup-message{
+    text-align: center;
+}
+
+.signup-message p{
+    color: #ffbc0f;
+    text-decoration: underline;
+}
+
+/*::::::::::img-login::::::::::*/
+
+.image-container {
+    width: 40%;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.img-container .img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
