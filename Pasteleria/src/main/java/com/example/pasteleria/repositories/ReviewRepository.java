@@ -10,5 +10,3 @@ import java.util.Optional;
 public interface ReviewRepository extends CrudRepository<ReviewModel,ReviewModel.ReviewModelId> {
     Optional<ReviewModel> findById(ReviewModel.ReviewModelId reviewModelId);
 }
-
-
