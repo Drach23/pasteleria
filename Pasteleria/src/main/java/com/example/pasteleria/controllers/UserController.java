@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
@@ -26,4 +27,20 @@ public class UserController {
 
         return userService.saveUser(user);
     }
+    //edit
+    @PutMapping()
+    public UserModel updateUser(@RequestBody UserModel user){
+        return userService.saveUser(user);
+    }
+    //getById
+    @GetMapping (path = "/findById")
+    public Optional<UserModel> findUserById(@RequestParam("id")Long id){
+        return this.userService.findUserById(id);
+    }
+    //deleteById
+    @DeleteMapping(path = "/deleteById")
+    public boolean deleteUser(@RequestParam("id")Long id){
+        return this.userService.deleteUser(id);
+    }
 }
+git
