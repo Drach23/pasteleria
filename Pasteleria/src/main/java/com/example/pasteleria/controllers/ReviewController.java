@@ -1,8 +1,7 @@
 package com.example.pasteleria.controllers;
 
-import com.example.pasteleria.Models.ReviewModel;
+import com.example.pasteleria.Models.AccesoryProductModel;
 
-import com.example.pasteleria.Models.UserModel;
 import com.example.pasteleria.services.ReviewServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,27 +16,27 @@ public class ReviewController {
     ReviewServices reviewService;
     //get
     @GetMapping()
-    public ArrayList<ReviewModel> findAllReviews(){
+    public ArrayList<AccesoryProductModel> findAllReviews(){
         return reviewService.findAllReviews();
     }
     //post
     @PostMapping()
-    public ReviewModel saveReview(@RequestBody ReviewModel review){
+    public AccesoryProductModel saveReview(@RequestBody AccesoryProductModel review){
         return reviewService.saveReview(review);
     }
     //edit
     @PutMapping()
-    public ReviewModel updateReview(@RequestBody ReviewModel review){
+    public AccesoryProductModel updateReview(@RequestBody AccesoryProductModel review){
         return reviewService.saveReview(review);
     }
 
     //findById
     @GetMapping(path = "/findById")
-    public Optional<ReviewModel> findReviewById(
+    public Optional<AccesoryProductModel> findReviewById(
             @RequestParam("userId") Long userId,
             @RequestParam("productId") Long productId
     ) {
-        ReviewModel.ReviewModelId reviewModelId = new ReviewModel.ReviewModelId();
+        AccesoryProductModel.ReviewModelId reviewModelId = new AccesoryProductModel.ReviewModelId();
         reviewModelId.setUserId(userId);
         reviewModelId.setProductId(productId);
 
@@ -49,7 +48,7 @@ public class ReviewController {
             @RequestParam("userId") Long userId,
             @RequestParam("productId") Long productId
     ) {
-        ReviewModel.ReviewModelId reviewModelId = new ReviewModel.ReviewModelId();
+        AccesoryProductModel.ReviewModelId reviewModelId = new AccesoryProductModel.ReviewModelId();
         reviewModelId.setUserId(userId);
         reviewModelId.setProductId(productId);
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class AdressUserServices {
@@ -19,5 +20,16 @@ public class AdressUserServices {
     //guardar una nueva direccion de usuario
     public AdressUserModel saveAdressUser(AdressUserModel adressUser){
         return adressUserRepository.save(adressUser);
+    }
+    public Optional<AdressUserModel> findById(Long id){
+        return adressUserRepository.findById(id);
+    }
+    public boolean deleteById(Long id){
+        try{
+            adressUserRepository.deleteById(id);
+            return true;
+        }catch(Exception e){
+            return false;
+        }
     }
 }

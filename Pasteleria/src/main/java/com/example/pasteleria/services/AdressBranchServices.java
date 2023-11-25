@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class AdressBranchServices {
@@ -19,5 +20,16 @@ public class AdressBranchServices {
      //registra una nueva direccion de sucursales
      public AdressBranchModel saveAdressBranch(AdressBranchModel adressBranch){
          return adressBranchRepository.save(adressBranch);
+     }
+     public Optional<AdressBranchModel> findById(Long id){
+         return adressBranchRepository.findById(id);
+     }
+     public boolean deleteById(Long id){
+         try {
+             adressBranchRepository.deleteById(id);
+             return true;
+         }catch(Exception e){
+             return false;
+         }
      }
 }
