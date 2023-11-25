@@ -5,7 +5,9 @@ import com.example.pasteleria.Models.OrderProductModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface OrderProductRepository extends CrudRepository<OrderProductModel,Long> {
+import java.util.Optional;
 
+@Repository
+public interface OrderProductRepository extends CrudRepository<OrderProductModel,OrderProductModel.OrderProductModelId> {
+    Optional<OrderProductModel> findById(OrderProductModel.OrderProductModelId orderProductModelId);
 }
