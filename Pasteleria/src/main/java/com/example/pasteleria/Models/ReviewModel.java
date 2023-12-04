@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 @Entity
 @Table(name = "reviews")
-public class ReviewController {
+public class ReviewModel {
     @EmbeddedId
     private ReviewModelId id;
 

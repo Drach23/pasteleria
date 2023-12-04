@@ -21,7 +21,7 @@ public class DeliveryModel {
     private Time horaEntrega;
     @ManyToOne
     @JoinColumn(name = "id_user_adress")
-    private AdressUserModel adressUser;
+    private UserAddressModel adressUser;
 
     public Long getId() {
         return id;
@@ -63,11 +63,11 @@ public class DeliveryModel {
         this.horaEntrega = horaEntrega;
     }
 
-    public AdressUserModel getAdressUser() {
+    public UserAddressModel getAdressUser() {
         return adressUser;
     }
 
-    public void setAdressUser(AdressUserModel adressUser) {
+    public void setAdressUser(UserAddressModel adressUser) {
         this.adressUser = adressUser;
     }
 }

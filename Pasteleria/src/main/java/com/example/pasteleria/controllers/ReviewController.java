@@ -1,5 +1,6 @@
 package com.example.pasteleria.controllers;
 
+import com.example.pasteleria.Models.ReviewModel;
 import com.example.pasteleria.services.ReviewServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,27 +15,27 @@ public class ReviewController {
     ReviewServices reviewService;
     //get
     @GetMapping()
-    public ArrayList<com.example.pasteleria.Models.ReviewController> findAllReviews(){
+    public ArrayList<ReviewModel> findAllReviews(){
         return reviewService.findAllReviews();
     }
     //post
     @PostMapping()
-    public com.example.pasteleria.Models.ReviewController saveReview(@RequestBody com.example.pasteleria.Models.ReviewController review){
+    public ReviewModel saveReview(@RequestBody ReviewModel review){
         return reviewService.saveReview(review);
     }
     //edit
     @PutMapping()
-    public com.example.pasteleria.Models.ReviewController updateReview(@RequestBody com.example.pasteleria.Models.ReviewController review){
+    public ReviewModel updateReview(@RequestBody ReviewModel review){
         return reviewService.saveReview(review);
     }
 
     //findById
     @GetMapping(path = "/findById")
-    public Optional<com.example.pasteleria.Models.ReviewController> findReviewById(
+    public Optional<ReviewModel> findReviewById(
             @RequestParam("userId") Long userId,
             @RequestParam("productId") Long productId
     ) {
-        com.example.pasteleria.Models.ReviewController.ReviewModelId reviewModelId = new com.example.pasteleria.Models.ReviewController.ReviewModelId();
+        ReviewModel.ReviewModelId reviewModelId = new ReviewModel.ReviewModelId();
         reviewModelId.setUserId(userId);
         reviewModelId.setProductId(productId);
 
@@ -46,7 +47,7 @@ public class ReviewController {
             @RequestParam("userId") Long userId,
             @RequestParam("productId") Long productId
     ) {
-        com.example.pasteleria.Models.ReviewController.ReviewModelId reviewModelId = new com.example.pasteleria.Models.ReviewController.ReviewModelId();
+        ReviewModel.ReviewModelId reviewModelId = new ReviewModel.ReviewModelId();
         reviewModelId.setUserId(userId);
         reviewModelId.setProductId(productId);
 
