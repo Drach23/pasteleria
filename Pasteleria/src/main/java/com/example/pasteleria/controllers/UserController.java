@@ -22,23 +22,23 @@ public class UserController {
     }
 
     //post
-    @PostMapping()
+    @PostMapping()//  http://localhost:8080/user
     public UserModel saveUser(@RequestBody UserModel user){
 
         return userService.saveUser(user);
     }
     //edit
-    @PutMapping()
+    @PutMapping() //  http://localhost:8080/user
     public UserModel updateUser(@RequestBody UserModel user){
         return userService.saveUser(user);
     }
     //getById
-    @GetMapping (path = "/findById")
+    @GetMapping (path = "/findById") //  http://localhost:8080/user/findById?id=1
     public Optional<UserModel> findUserById(@RequestParam("id")Long id){
         return this.userService.findUserById(id);
     }
     //deleteById
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById") //  http://localhost:8080/user/deleteById?id=1
     public boolean deleteUser(@RequestParam("id")Long id){
         return this.userService.deleteUser(id);
     }

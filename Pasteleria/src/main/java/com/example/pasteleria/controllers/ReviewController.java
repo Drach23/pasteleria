@@ -14,23 +14,23 @@ public class ReviewController {
     @Autowired
     ReviewServices reviewService;
     //get
-    @GetMapping()
+    @GetMapping() // http://localhost:8080/reviews
     public ArrayList<ReviewModel> findAllReviews(){
         return reviewService.findAllReviews();
     }
     //post
-    @PostMapping()
+    @PostMapping() // http://localhost:8080/reviews
     public ReviewModel saveReview(@RequestBody ReviewModel review){
         return reviewService.saveReview(review);
     }
     //edit
-    @PutMapping()
+    @PutMapping() // http://localhost:8080/reviews
     public ReviewModel updateReview(@RequestBody ReviewModel review){
         return reviewService.saveReview(review);
     }
 
     //findById
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") //  http://localhost:8080/reviews/findById?userId=1&productId=1
     public Optional<ReviewModel> findReviewById(
             @RequestParam("userId") Long userId,
             @RequestParam("productId") Long productId
@@ -42,7 +42,7 @@ public class ReviewController {
         return this.reviewService.findReviewById(reviewModelId);
     }
     //deleteById
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById") //  http://localhost:8080/reviews/deleteById?userId=1&productId=1
     public String deleteById(
             @RequestParam("userId") Long userId,
             @RequestParam("productId") Long productId

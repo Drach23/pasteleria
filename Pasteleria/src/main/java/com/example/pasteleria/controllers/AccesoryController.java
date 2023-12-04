@@ -14,25 +14,25 @@ public class AccesoryController {
     @Autowired
     AccessoryServices accesoryService;
 
-    @GetMapping()
+    @GetMapping()// http://localhost:8080/accessory
     public ArrayList<AccessoryModel> findAllAccesorys(){
         return accesoryService.findAllAccesorys();
     }
 
-    @PostMapping()
+    @PostMapping()//http://localhost:8080/accessory
     public AccessoryModel saveAcessory(@RequestBody AccessoryModel accessory){
         return accesoryService.saveAccessory(accessory);
     }
-    @PutMapping()
+    @PutMapping()//http://localhost:8080/accessory
     public AccessoryModel updateAcessory(@RequestBody AccessoryModel accessory){
         return accesoryService.saveAccessory(accessory);
     }
 
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById")//http://localhost:8080/accessory/findById?id=1
     public Optional<AccessoryModel> findById(@RequestParam("id")Long id){
         return this.accesoryService.findById(id);
     }
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById")//http://localhost:8080/accessory/deleteById?id=1
     public boolean deleteById(@RequestParam("id")Long id){
         return this.accesoryService.deleteById(id);
     }

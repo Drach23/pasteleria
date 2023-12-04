@@ -16,28 +16,26 @@ public class BranchController {
     BranchServices branchServices;
 
     //get
-    @GetMapping()
+    @GetMapping() // http://localhost:8080/branches
     public ArrayList<BranchModel> findAllBranches(){
         return branchServices.findAllBranches();
     }
     //post
-    @PostMapping()
+    @PostMapping()// http://localhost:8080/branches
     public BranchModel saveBranch(@RequestBody BranchModel branch){
         return branchServices.saveBranch(branch);
     }
-    @PutMapping()
+    @PutMapping() // http://localhost:8080/branches
     public BranchModel updateBranch(@RequestBody BranchModel branch){
         return branchServices.saveBranch(branch);
     }
 
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") // http://localhost:8080/branches/findById?id=1
     public Optional<BranchModel> findById(@RequestParam("id")Long id){
         return this.branchServices.findById(id);
     }
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById") //http://localhost:8080/branches/deleteById?id=1
     public boolean deleteBranch(@RequestParam("id")Long id){
         return this.branchServices.deleteById(id);
     }
-
-
 }

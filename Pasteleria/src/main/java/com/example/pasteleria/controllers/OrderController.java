@@ -14,27 +14,27 @@ public class OrderController {
     @Autowired
     OrderServices orderService;
     //get
-    @GetMapping()
+    @GetMapping()// http://localhost:8080/order
         public ArrayList<OrderModel> findAllOrders(){
         return orderService.findAllOrders();
     }
     //post
-    @PostMapping()
+    @PostMapping() // http://localhost:8080/order
     public OrderModel saveOrder(@RequestBody OrderModel order){
         return orderService.saveOrder(order);
     }
     //put
-    @PutMapping()
+    @PutMapping() // http://localhost:8080/order
     public OrderModel updateOrder(@RequestBody OrderModel order){
         return orderService.saveOrder(order);
     }
 
     //encontrar por orden por id
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") // http://localhost:8080/order/findById?id=1
     public Optional<OrderModel> findOrderById(@RequestParam("id")Long id){
         return this.orderService.findOrderById(id);
     }
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById")// http://localhost:8080/order/deleteById?id=1
     public Boolean deleteOrder(@RequestParam("id")Long id){
         return this.orderService.deleteOrder(id);
     }

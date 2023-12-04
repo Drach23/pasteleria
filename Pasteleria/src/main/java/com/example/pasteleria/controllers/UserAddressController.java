@@ -14,26 +14,26 @@ public class UserAddressController {
     @Autowired
     UserAddressServices adressUserService;
     //encontrar todos las direcciones de los usuarios
-    @GetMapping()
+    @GetMapping() // http://localhost:8080/userAdress
     public ArrayList<UserAddressModel> findAllAdressUser(){
         return adressUserService.findAllAdressUsers();
     }
     //guardar una direccion de usuario
-    @PostMapping()
+    @PostMapping() //  http://localhost:8080/userAdress
     public UserAddressModel saveAdressUser(@RequestBody UserAddressModel adressUser) {
         return adressUserService.saveAdressUser(adressUser);
     }
     //editar una direccion de usuario
-    @PutMapping
+    @PutMapping() //  http://localhost:8080/userAdress
     public UserAddressModel updateAdressUser(@RequestBody UserAddressModel adressUser) {
         return adressUserService.saveAdressUser(adressUser);
     }
 
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") // http://localhost:8080/userAdress/findById?id=1
     public Optional<UserAddressModel> findById(@RequestParam("id")Long id){
         return this.adressUserService.findById(id);
     }
-    @DeleteMapping(path = "deleteById")
+    @DeleteMapping(path = "deleteById") //  http://localhost:8080/userAdress/deleteById?id=1
     public boolean deleteById(@RequestParam("id")Long id){
         return this.adressUserService.deleteById(id);
     }

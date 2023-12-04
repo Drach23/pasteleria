@@ -15,28 +15,28 @@ public class CategoryController {
     CategoryServices categoryServices;
 
     //get
-    @GetMapping()
+    @GetMapping()//http://localhost:8080/categorias
     public ArrayList<CategoryModel> findAllCategories(){
         return categoryServices.findAllCategories();
     }
 
     //set
-    @PostMapping()
+    @PostMapping() //http://localhost:8080/categorias
     public CategoryModel saveCategory(@RequestBody CategoryModel category){
         return categoryServices.SaveCategory(category);
     }
     //edit
-    @PutMapping()
+    @PutMapping() // http://localhost:8080/categorias
     public CategoryModel updateCategory(@RequestBody CategoryModel category){
         return categoryServices.SaveCategory(category);
     }
     //findById
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") //http://localhost:8080/categorias/findById?id=1
     public Optional<CategoryModel> findById(@RequestParam("id")Long id){
         return this.categoryServices.findById(id);
     }
     //deleteById
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById") //http://localhost:8080/categorias/deleteById?id=1
     public boolean deleteCategory(@RequestParam("id")Long id){
         return this.categoryServices.deleteCategory(id);
     }
