@@ -217,13 +217,15 @@ body,html {
   .page-container {
     min-height: 100vh;
     position: relative;
-  }
-  
-  .footer {
+    flex-direction: column;
+}
+
+.footer {
     width: 100%;
     background-color: rgb(51,3,0);
     clear: both;
-  }
+    margin-top: auto;
+}
   
   .footer .group-1 {
     width: 100%;

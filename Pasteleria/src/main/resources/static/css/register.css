@@ -167,6 +167,15 @@ header .logo h1 a{
     background:rgb(15, 73, 75);
   }
 
+  #successMessage {
+    color: greenyellow;
+    text-align: center;
+  }
+
+  #errorMessage {
+    color: yellow;
+    text-align: center;
+  }
   /*:::::Footer section:::::*/
 
   body,html {

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Sacramento&display=swap');
+
+
+/*:::::Page Formatting:::::*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+body {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+/*:::::Header Styles:::::*/
+.header {
+    background-color: rgb(90, 9, 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+header .logo h1 a{
+    cursor: pointer;
+    font-family:'Sacramento',cursive;
+    font-size: 40px;
+    color:white;
+    pointer-events:painted;
+    user-select: none;
+    text-decoration: none;
+}
+
+.header .logo img {
+    height: 80px;
+    width: auto;
+}
+
+.header .logo:hover {
+    transform: scale(1.2);
+}
+
+
+.header .navLinks li {
+    display: inline-block;
+    padding: 0 20px;
+    user-select: none;
+}
+
+.header .navLinks li:hover {
+    transform: scale(1.1);
+}
+
+.header .navLinks a {
+    font-size: 26px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.header .navLinks li a:hover {
+    color: #ffbc0f;
+}
+
+.header .btn button {
+    font-weight: bold;
+    color: #1b3039;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: #eceff1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header .btn button:hover {
+    background-color: #e2f1f8;
+    color: #ffbc0f;
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+}
+
+/* Título */
+h4 {
+    text-align: center;
+    font-size: 36px;
+    color: rgb(90, 9, 3);
+    margin: 20px 0; 
+}
+
+/* Tabla de pedidos */
+#orderTable {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px; /* Añade espacio arriba */
+}
+
+#orderTable th, #orderTable td {
+    padding: 10px;
+    text-align: center;
+}
+
+#orderTable th {
+    background-color: #911903; 
+    color: white;
+}
+
+#orderTable tbody tr {
+    background-color: white; 
+    color: black; 
+}
+
+#orderTable tbody tr:not(:first-child) {
+    margin-top: 5px; 
+}
+
+    /*:::::Footer section:::::*/
+
+    body,html {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .page-container {
+        min-height: 100vh;
+        position: relative;
+        flex-direction: column;
+    }
+    
+    .footer {
+        width: 100%;
+        background-color: rgb(51,3,0);
+        clear: both;
+        margin-top: auto;
+    }
+    
+    .footer .group-1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+    }
+    
+    .footer .group-1 .box figure {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer .group-1 .box figure h1 a{
+        font-family:'Sacramento',cursive;
+        color: white;
+        font-size: 50px;
+        text-decoration: none;
+    }
+    
+    .footer .group-1 .box figure img:hover {
+        transform: scale(1.2);
+    }
+    
+    .footer .group-1 .box h2 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .footer .group-1 .box p {
+        margin-bottom: 10px;
+        text-align: center;
+        color: white;
+    }
+    
+    .footer .group-1 .socialMedia a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 60px;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        color: white;
+        margin-right: 0px;
+        margin-left: 50px;
+    }
+    
+    .footer .group-1 .socialMedia a:hover {
+        transform: scale(1.3);
+        color: #ffbc0f;
+    }
+    
+    .footer .group-2 {
+        background-color: rgb(32,6,0);
+        color: #fff;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    
+    .footer .group-2 small {
+        font-size: 25px;
+    }
