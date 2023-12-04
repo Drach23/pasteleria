@@ -1,34 +1,71 @@
-const url = "http://localhost:8080/productos";
+function getProductsByCategoria(categoriaId) {
+    const url = `http://localhost:8080/productos/findByCategoria?categoriaId=${categoriaId}`;
 
-// Realiza la solicitud de datos al servidor
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        // Itera sobre los productos y crea un div para cada uno
-        data.forEach(producto => {
-            crearDivProducto(producto);
-        });
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
-    .catch(error => console.error("Error al obtener datos de productos:", error));
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            displayProducts(data);
+        })
+        .catch(error => {
+            console.error("Hubo un error: ", error);
+            showError("ERROR: No se encontraron productos para la categoría seleccionada");
+        });
+}
 
-function crearDivProducto(producto) {
+// Obtén el parámetro de la URL que indica la categoría
+const urlParams = new URLSearchParams(window.location.search);
+const categoriaId = urlParams.get("categoriaId");
+
+if (categoriaId) {
+    // Si hay un parámetro de categoría, obtén productos filtrados por esa categoría
+    getProductsByCategoria(categoriaId);
+} else {
+    // Si no hay un parámetro de categoría, carga todos los productos
+    const url = "http://localhost:8080/productos";
+
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            displayProducts(data);
+        })
+        .catch(error => {
+            console.error("Hubo un error: ", error);
+            showError("ERROR: No se encontraron productos");
+        });
+}
+
+function displayProducts(products) {
     const productContainer = document.getElementById("productContainer");
 
-    // Construye la ruta de la imagen basada en el ID del producto
-    const rutaImagen = `../img/products/${producto.id}.jpg`; // Utiliza acentos graves (backticks) aquí
+    products.forEach(producto => {
+        const rutaImagen = `../img/products/${producto.id}.jpg`;
+        const divProducto = document.createElement("div");
+        divProducto.className = "producto";
 
-    // Crea un nuevo div para el producto
-    const divProducto = document.createElement("div");
-    divProducto.className = "producto";
+        divProducto.innerHTML = `
+            <h2>${producto.nombre}</h2>
+            <img src="${rutaImagen}" alt="${producto.nombre}" class="producto-imagen">
+            <p>Precio: ${producto.precio}</p>
+            <p>Descripción: ${producto.descripcion}</p>
+        `;
 
-    // Agrega la información del producto al div, incluida la imagen
-    divProducto.innerHTML = `
-        <h2>${producto.nombre}</h2>
-        <img src="${rutaImagen}" alt="${producto.nombre}" class="producto-imagen">
-        <p>Precio: ${producto.precio}</p>
-        <p>Descripción: ${producto.descripcion}</p>
-    `;
+        productContainer.appendChild(divProducto);
+    });
+}
 
-    // Agrega el div del producto al contenedor
-    productContainer.appendChild(divProducto);
+function showError(message) {
+    // Implementa la lógica para mostrar un mensaje de error en la interfaz de usuario
+    console.error(message);
 }
