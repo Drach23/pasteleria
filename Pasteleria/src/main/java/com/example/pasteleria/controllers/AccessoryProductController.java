@@ -14,22 +14,22 @@ public class AccessoryProductController {
     @Autowired
     AccessoryProductServices accessoryProductService;
     //encuentra todos
-    @GetMapping
+    @GetMapping()// http://localhost:8080/accessoryProduct
     public ArrayList<AccessoryProductModel> findAllAccesoryProducts(){
         return accessoryProductService.findAllAccessoryProducts();
     }
     //guarda uno
-    @PostMapping()
+    @PostMapping()//http://localhost:8080/accessoryProduct
     public AccessoryProductModel saveAccesoryProduct(@RequestBody AccessoryProductModel accessoryProduct){
         return accessoryProductService.saveAccesoryProduct(accessoryProduct);
     }
     //edita
-    @PutMapping()
+    @PutMapping() // http://localhost:8080/accessoryProduct
     public AccessoryProductModel updateAccesoryProduct(@RequestBody AccessoryProductModel accessoryProduct){
         return accessoryProductService.saveAccesoryProduct(accessoryProduct);
     }
     //findById
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") // http://localhost:8080/accessoryProduct/findById?orderId=1&productId=1&AccesoryId=1
     public Optional<AccessoryProductModel> findById(
             @RequestParam("orderId") Long orderId,
             @RequestParam("productId") Long productId,
@@ -43,7 +43,7 @@ public class AccessoryProductController {
         return this.accessoryProductService.findById(accessoryProductModelId);
     }
     //deleteById
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById") //http://localhost:8080/accessoryProduct/deleteById?orderId=1&productId=1&AccesoryId=1
     public String deleteById(
             @RequestParam("orderId") Long orderId,
             @RequestParam("productId") Long productId,

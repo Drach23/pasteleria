@@ -15,25 +15,25 @@ public class OrderProductController {
     OrderProductServices orderProductService;
 
     //get
-    @GetMapping()
+    @GetMapping()// http://localhost:8080/orderProduct
     public ArrayList<OrderProductModel> findAllOrderProducts() {
 
         return orderProductService.findAllOrderProducts();
     }
 
-    @PostMapping()
+    @PostMapping()// http://localhost:8080/orderProduct
     public OrderProductModel saveOrderProduct(@RequestBody OrderProductModel orderProduct) {
         return orderProductService.saveOrderProduct(orderProduct);
     }
 
     //put
-    @PutMapping()
+    @PutMapping()// http://localhost:8080/orderProduct
     public OrderProductModel updateOrderProduct(@RequestBody OrderProductModel orderProduct) {
         return orderProductService.saveOrderProduct(orderProduct);
     }
 
     //findById
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") // http://localhost:8080/orderProduct/findById?productId=1&orderId=1
     public Optional<OrderProductModel> findById(
             @RequestParam("productId") Long productId,
             @RequestParam("orderId") Long orderId
@@ -46,7 +46,7 @@ public class OrderProductController {
     }
 
     //deleteById
-    @DeleteMapping(path = "/deleteById")
+    @DeleteMapping(path = "/deleteById") // http://localhost:8080/orderProduct/deleteById?productId=1&orderId=1
     public String deleteById(
             @RequestParam("productId") Long productId,
             @RequestParam("orderId") Long orderId

@@ -15,29 +15,29 @@ public class DeliveryController {
     DeliveryServices deliveryService;
 
     //toma todos los envios
-    @GetMapping()
+    @GetMapping()//http://localhost:8080/deliverys
     public ArrayList<DeliveryModel> findAllDeliverys() {
         return deliveryService.findAllDeliverys();
     }
 
     //guarda un envio nuevo
-    @PostMapping()
+    @PostMapping() // http://localhost:8080/deliverys
     public DeliveryModel saveDelivery(@RequestBody DeliveryModel delivery) {
         return deliveryService.saveDelivery(delivery);
     }
     //edita un envio
-    @PutMapping()
+    @PutMapping()//http://localhost:8080/deliverys
     public DeliveryModel updateDelivery(@RequestBody DeliveryModel delivery) {
         return deliveryService.saveDelivery(delivery);
     }
 
     //obtiene un envio por su id
-    @GetMapping(path = "/findById")
+    @GetMapping(path = "/findById") // http://localhost:8080/deliverys/findById?id=6
     public Optional<DeliveryModel> findById(@RequestParam("id")Long id){
         return this.deliveryService.findById(id);
     }
     //elimina un envio por su id
-    @DeleteMapping(path = "deleteById")
+    @DeleteMapping(path = "deleteById") // http://localhost:8080/deliverys/deleteById?id=6
     public boolean deleteDelivery(@RequestParam("id")Long id){
         return this.deliveryService.deleteDelivery(id);
     }
