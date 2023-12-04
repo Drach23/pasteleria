@@ -1,0 +1,26 @@
+
+#productContainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    box-sizing: border-box;
+    width: 50%; /* Ocupa la mitad del contenedor (dos productos por fila) */
+    padding: 10px;
+}
+
+.producto h2 {
+    color: #333;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+.producto-imagen {
+    max-width: 500px; /* Ajusta el ancho de la imagen para que no desborde el contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
