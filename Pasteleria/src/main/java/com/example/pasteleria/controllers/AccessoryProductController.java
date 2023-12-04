@@ -1,7 +1,6 @@
 package com.example.pasteleria.controllers;
 
 import com.example.pasteleria.Models.AccessoryProductModel;
-import com.example.pasteleria.Models.AccesoryProductModel;
 import com.example.pasteleria.services.AccessoryProductServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

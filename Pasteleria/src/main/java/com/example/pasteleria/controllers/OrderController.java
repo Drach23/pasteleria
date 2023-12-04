@@ -19,12 +19,12 @@ public class OrderController {
         return orderService.findAllOrders();
     }
     //post
-    @PostMapping
+    @PostMapping()
     public OrderModel saveOrder(@RequestBody OrderModel order){
         return orderService.saveOrder(order);
     }
     //put
-    @PutMapping
+    @PutMapping()
     public OrderModel updateOrder(@RequestBody OrderModel order){
         return orderService.saveOrder(order);
     }
