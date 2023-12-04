@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/register.css">
     <script src="https://kit.fontawesome.com/10eaabc060.js" crossorigin="anonymous"></script>
+    <script src="../js/register.js"></script>
     <title>Registro</title>
 </head>
 <body>
@@ -25,13 +26,14 @@
             <h4>Registrate</h4>
             </div>
             <input class="controls" type="text" name="name" id="inputName" placeholder="Ingresa tu nombre">
-            <input class="controls" type="text" name="name" id="inputLastName" placeholder="Ingresa tus apellidos">
+            <input class="controls" type="text" name="lastName" id="inputLastName" placeholder="Ingresa tus apellidos">
             <input class="controls" type="number" name="phone" id="inputPhone" placeholder="Ingresa tu numero de telefono">
             <input class="controls" type="email" name="email" id="inputEmail" placeholder="Ingresa tu correo electronico">
             <h4>Crea una contraseña</h4>
             <input class="controls" type="text" name="password" id="inputPassword" placeholder="Ingresa una contraseña">
-            <input class="controls" type="text" name="confirmPass" id="inputConfirmPass" placeholder="Confirma tu contraseña">
-            <button type="button" class="buttons" onclick=""><h1>CREAR CUENTA</h1></button>
+            <button type="button" class="buttons" onclick="if (validateForm()) userRegister()"><h1>CREAR CUENTA</h1></button>
+            <div id="successMessage" class="success-message"></div>
+            <div id="errorMessage" class="error-message"></div>
         </form>
         <footer class="footer">
             <div class="group-1">
