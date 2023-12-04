@@ -19,7 +19,7 @@ public class OrderModel {
 
     @ManyToOne
     @JoinColumn(name = "idSucursal")
-    private AdressBranchModel adressBranch;
+    private BranchAddressModel adressBranch;
 
     private String metodoPago;
     private float total;
@@ -66,11 +66,11 @@ public class OrderModel {
         this.total = total;
     }
 
-    public AdressBranchModel getAdressBranch() {
+    public BranchAddressModel getAdressBranch() {
         return adressBranch;
     }
 
-    public void setAdressBranch(AdressBranchModel adressBranch) {
+    public void setAdressBranch(BranchAddressModel adressBranch) {
         this.adressBranch = adressBranch;
     }
 }

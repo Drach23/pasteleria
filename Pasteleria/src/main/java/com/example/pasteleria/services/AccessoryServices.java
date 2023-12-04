@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class AccessoryServices {
@@ -18,5 +19,18 @@ public class AccessoryServices {
 
     public AccessoryModel saveAccessory(AccessoryModel accessory){
         return accessoryRepository.save(accessory);
+    }
+
+    //findById
+    public Optional<AccessoryModel> findById(Long id){
+        return accessoryRepository.findById(id);
+    }
+    public boolean deleteById(Long id){
+        try{
+            accessoryRepository.deleteById(id);
+            return true;
+        }catch(Exception e){
+            return false;
+        }
     }
 }
