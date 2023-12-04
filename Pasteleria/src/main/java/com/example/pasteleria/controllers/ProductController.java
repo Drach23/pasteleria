@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -30,6 +31,12 @@ public class ProductController {
     public Optional<ProductModel> findProductById(@RequestParam("id")Long id){
         return this.productServices.findProductById(id);
     }
+
+    @GetMapping("/findByCategoria")
+    public List<ProductModel> findByCategoria(@RequestParam("categoriaId") Long categoriaId) {
+        return productServices.findByCategoriaId(categoriaId);
+    }
+
     @PutMapping ()
     public ProductModel updateProduct(@RequestBody  ProductModel product){
         return productServices.saveProduct(product);
