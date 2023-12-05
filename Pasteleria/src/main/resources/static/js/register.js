@@ -8,6 +8,8 @@ function registerSuccessMessage() {
         successDiv.innerText = "";
         successDiv.classList.remove("success-message");
     }, 5000);
+    
+    window.location.href = "../html/loged.html";
 }
 
 function validateForm(){

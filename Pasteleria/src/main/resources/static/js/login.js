@@ -7,7 +7,12 @@ function registerSuccessMessage() {
     setTimeout(function () {
         successDiv.innerText = "";
         successDiv.classList.remove("success-message");
+
+        // Redirigir a la página loged.html
+        
     }, 5000);
+
+    window.location.href = "../html/loged.html";
 }
 
 function validateForm(){
