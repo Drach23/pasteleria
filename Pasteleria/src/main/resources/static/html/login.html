@@ -1,76 +1,146 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/10eaabc060.js" crossorigin="anonymous"></script>
-    <script src="../js/login.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <h1><a href="./index.html">Pastelerias Gourmet</a></h1>
+<header class="header">
+    <div class="logo">
+        <h1><a href="./index.html">Pastelerias Gourmet</a></h1>
+    </div>
+    <nav>
+        <ul class="navLinks">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#aboutUs">Sobre nosotros</a></li>
+            <li><a href="https://www.google.com/maps/search/cucei/@20.6567242,-103.3278081,16z/data=!3m1!4b1" target="_blank">Mapa</a></li>
+        </ul>
+    </nav>
+    <a href="./loged.html" class="btn"><button>Iniciar sesion</button></a>
+</header>
+
+<div class="container">
+    <div class="imgCover">
+    </div>
+</div>
+    <div class="container">
+        <!-- Productos-->
+        <div class="textOver">
+            <h1>Contamos con los siguientes productos</h1>
         </div>
-        <nav>
-            <ul class="navLinks">
-                <li><a href="#">Productos</a></li>
-                <li><a href="#aboutUs">Sobre nosotros</a></li>
-                <li><a href="#">Mapa</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="main-content">
-        <div class="form-container">
-            <form class="formLogin" id="form">
-                <div class="imgBox">
-                    <img src="../img/ICON/user.png" alt="Imagen de usuario" class="user-image">
+        <div class="cardContainer" id="productos">
+            <div class="card">
+                <figure>
+                    <a href="./Pasteles.html">
+                        <img src="../img/cards/preparar.jpg" alt="Persona preparando un pastel">
+                    </a>
+                </figure>
+                <div class="content">
+                    <h2>Pasteles</h2>
                 </div>
-                <label for="inputEmail">Email:</label>
-                <input class="controls" type="email" name="email" id="inputEmail" placeholder="Ej. elvisko@gmail.com">
-                <label for="inputPassword">Contraseña:</label>
-                <input class="controls" type="password" name="password" id="inputPassword">
-                <button type="button" class="buttons" onclick="if (validateForm()) userLogin()"><h1>Iniciar sesión</h1></button>
-                <div id="successMessage" class="success-message"></div>
-                <div id="errorMessage" class="error-message"></div>
-                <div class="signup-message">
-                    <label>¿AÚN NO TIENES CUENTA?</label>
-                    <p><a href="register.html">DA CLICK AQUÍ PARA CREAR UNA</a></p>
+            </div>
+            <div class="card">
+                <figure>
+                    <a href="./Pasteles.html">
+                    <img src="../img/cards/galletas.jpg" alt="conjunto de galletas">
+                    </a>
+                </figure>
+                <div class="content">
+                    <h2>Galletas</h2>
                 </div>
-            </form>
-        </div>
-        <div class="image-container">
-            <img src="../img/cover/cover-login1.jpg" alt="Descripción de la imagen">
+            </div>
+            <div class="card">
+                <figure>
+                    <a href="./Pasteles.html">
+                    <img src="../img/cards/pay.jpg" alt="pay de queso">
+                    </a>
+                </figure>
+                <div class="content">
+                    <h2>Pays</h2>
+                </div>
+            </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="group-1">
-            <div class="box">
-                <figure>
-                    <h1><a href="./index.html">Pastelerias Gourmet</a></h1>
-                </figure>
+<div class="cardContainer" id="productos">
+    <div class="card">
+        <figure>
+            <a href="./Pasteles.html">
+            <img src="../img/cards/cupcakes.jpg" alt="cupcakes de prueba">
+            </a>
+        </figure>
+        <div class="content">
+            <h2>Cupcakes</h2>
+        </div>
+    </div>
+    <div class="card">
+        <figure>
+            <a href="./Pasteles.html">
+            <img src="../img/cards/pan.jpg" alt="pan mexicano llamado pan de muerto">
+            </a>
+        </figure>
+        <div class="content">
+            <h2>Panes</h2>
+        </div>
+    </div>
+    <div class="card">
+        <figure>
+            <a href="./Pasteles.html">
+            <img src="../img/cards/gelatina.jpg" alt="gelatina ">
+            </a>
+        </figure>
+        <div class="content">
+            <h2>Gelatinas</h2>
+        </div>
+    </div>
+</div>
+
+
+        <div class="container1">
+            <div class="textOver">
+                <h1>Sobre nosotros</h1>
             </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, assumenda!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, unde.</p>
-            </div>
-            <div class="box">
-                <h2>SIGUENOS EN NUESTRAS REDES SOCIALES</h2>
-                <div class="socialMedia">
-                    <a href="#" class="fa-brands fa-facebook"></a>
-                    <a href="#" class="fa-brands fa-instagram"></a>
-                    <a href="#" class="fa-brands fa-tiktok"></a>
+            <div class="cardContainer1" id="aboutUs">
+                <div class="card1">
+                    <figure>
+                        <img src="../img/cards/preparar.jpg" alt="apartado para conocer mas">
+                    </figure>
+                    <div class="content1">
+                        <h3>¿Quieres saber más de nosotros?</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="group-2">
-            <small>&copy;2023 <b>PASTELERIAS GOURMET | Todos los derechos reservados</small>
-        </div>
-    </footer>
+
+        <div class="bodyText"></div>
+        <footer class="footer">
+            <div class="group-1">
+                <div class="box">
+                    <figure>
+                        <h1><a href="./index.html">Pastelerias Gourmet</a></h1>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, assumenda!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, unde.</p>
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS EN NUESTRAS REDES SOCIALES</h2>
+                    <div class="socialMedia">
+                        <a href="#" class="fa-brands fa-facebook"></a>
+                        <a href="#" class="fa-brands fa-instagram"></a>
+                        <a href="#" class="fa-brands fa-tiktok"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="group-2">
+                <small>&copy;2023 <b>PASTELERIAS GOURMET | Todos los derechos reservados</small>
+            </div>
+        </footer>
 </body>
 </html>
