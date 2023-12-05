@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/register.css">
     <script src="https://kit.fontawesome.com/10eaabc060.js" crossorigin="anonymous"></script>
+    <script src="../js/register.js"></script>
+    <title>Registro de Accesorio</title>
 </head>
-
 <body>
     <header class="header">
         <div class="logo">
@@ -22,27 +20,18 @@
             </ul>
         </nav>
     </header>
-    <div class="main-content">
-        <div class="form-container">
-            <form class="formLogin" id="form">
-                <div class="imgBox">
-                    <img src="../img/ICON/user.png" alt="Imagen de usuario" class="user-image">
-                </div>
-                <label for="inputEmail">Email:</label>
-                <input class="controls" type="email" name="email" id="inputEmail" placeholder="Ej. elvisko@gmail.com">
-                <label for="inputPassword">Contraseña:</label>
-                <input class="controls" type="password" name="password" id="inputPassword">
-                <button type="button" class="buttons" onclick=""><h1>Iniciar sesión</h1></button>
-                <div class="signup-message">
-                    <label>¿AÚN NO TIENES CUENTA?</label>
-                    <p><a href="./register.html">DA CLICK AQUÍ PARA CREAR UNA</a></p>
-                </div>
-            </form>
+    <form class="formRegister" id="form">
+        <div class="formTittle">
+            <h4>Acessorios</h4>
         </div>
-        <div class="image-container">
-            <img src="../img/cover/cover-login1.jpg" alt="Descripción de la imagen">
-        </div>
-    </div>
+        <input class="controls" type="text" name="nombre" id="inputNombre" placeholder="Nombre del accesorio">
+        <input class="controls" type="text" name="descripcion" id="inputDescripcion" placeholder="Descripción del accesorio">
+        <input class="controls" type="number" name="costoAdicional" id="inputCostoAdicional" placeholder="Costo adicional">
+        <input class="controls" type="text" name="status" id="inputStatus" placeholder="Estado del accesorio">
+        <button type="button" class="buttons" onclick="registerAccessory()"><h1>REGISTRAR ACCESORIO</h1></button>
+        <div id="successMessage" class="success-message"></div>
+        <div id="errorMessage" class="error-message"></div>
+    </form>
     <footer class="footer">
         <div class="group-1">
             <div class="box">
@@ -52,8 +41,6 @@
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, assumenda!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, unde.</p>
             </div>
             <div class="box">
                 <h2>SIGUENOS EN NUESTRAS REDES SOCIALES</h2>

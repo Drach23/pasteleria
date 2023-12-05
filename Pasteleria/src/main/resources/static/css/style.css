@@ -17,8 +17,6 @@ html {
   position: relative;
 }
 
-
-
 body {
   background-color: white;
   margin: 0;
@@ -156,6 +154,33 @@ header .logo h1 a{
   text-align: center;
   font-size: 30px;
 }
+/*:::::imagen pasteles:::::*/
+.container .imgCover2 {
+  background-image: url(../img/cover/cover-login1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Ajustes para el texto o cualquier otro contenido que desees agregar */
+.container .imgCover2 h1 {
+  font-size: 35px;
+  font-weight: bold;
+  color: orange;
+  padding-top: 230px;
+  padding-right: 1000px;
+  padding-left: 20px;
+}
 
 /*:::::Cards Section:::::*/
 .cardContainer {
@@ -174,6 +199,7 @@ header .logo h1 a{
   cursor: default;
   transition: all 400ms ease;
 }
+
 
 .card:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
@@ -195,8 +221,42 @@ header .logo h1 a{
   line-height: 1.5;
   color: #6a6a6a;
 }
+/*:::::About us:::::*/
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
+.card1 {
+  width: 300px;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 400ms ease;
+}
 
+.card1:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+.card1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardContainer1 {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 /*:::::Footer section:::::*/
 
 body,
