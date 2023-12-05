@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="https://kit.fontawesome.com/10eaabc060.js" crossorigin="anonymous"></script>
+    <script src="../js/direccionUsuario.js"></script>
+    <title>Direcciones</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1><a href="./index.html">Pastelerias Gourmet</a></h1>
+        </div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="#">Productos</a></li>
+                <li><a href="#aboutUs">Sobre nosotros</a></li>
+                <li><a href="#">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+        <form class="formRegister" id="form">
+            <div class="formTittle">
+            <h4>Agrega tu direccion</h4>
+            </div>
+            <h4>id del cliente</h4>
+            <input class="controls" type="text" name="id" id="inputId" placeholder="Ingresa el id del cliente">
+            <h4>datos del cliente</h4>
+            <input class="controls" type="text" name="calle" id="inputCalle" placeholder="Calle">
+            <input class="controls" type="text" name="Numero" id="inputNumero" placeholder="numero">
+            <input class="controls" type="text" name="ciudad" id="inputCiudad" placeholder="Ciudad">
+            <input class="controls" type="text" name="estado" id="inputEstado" placeholder="Estado">
+            <input class="controls" type="text" name="codigoPostal" id="inputCodigoPostal" placeholder="Codigo postal">
+            <button type="button" class="buttons" onclick="userAddressRegister()"><h1>ENVIAR</h1></button>
+            <div id="successMessage" class="success-message"></div>
+            <div id="errorMessage" class="error-message"></div>
+        </form>
+        <footer class="footer">
+            <div class="group-1">
+                <div class="box">
+                    <figure>
+                        <h1><a href="./index.html">Pastelerias Gourmet</a></h1>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, assumenda!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, unde.</p>
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS EN NUESTRAS REDES SOCIALES</h2>
+                    <div class="socialMedia">
+                        <a href="#" class="fa-brands fa-facebook"></a>
+                        <a href="#" class="fa-brands fa-instagram"></a>
+                        <a href="#" class="fa-brands fa-tiktok"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="group-2">
+                <small>&copy;2023 <b>PASTELERIAS GOURMET | Todos los derechos reservados</small>
+            </div>
+        </footer>
+</body>
+</html>
