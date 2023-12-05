@@ -36,8 +36,8 @@ public class ProductController {
     public List<ProductModel> findByCategoria(@RequestParam("categoriaId") Long categoriaId) {
         return productServices.findByCategoriaId(categoriaId);
     }
-
-    @PutMapping ()
+    
+    @PutMapping ()//http://localhost:8080/productos
     public ProductModel updateProduct(@RequestBody  ProductModel product){
         return productServices.saveProduct(product);
     }
