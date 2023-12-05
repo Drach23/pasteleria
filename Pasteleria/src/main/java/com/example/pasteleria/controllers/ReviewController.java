@@ -3,9 +3,11 @@ package com.example.pasteleria.controllers;
 import com.example.pasteleria.Models.ReviewModel;
 import com.example.pasteleria.services.ReviewServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -41,6 +43,13 @@ public class ReviewController {
 
         return this.reviewService.findReviewById(reviewModelId);
     }
+
+    @GetMapping("/findByProductId")
+    public ResponseEntity<List<ReviewModel>> findByProductId(@RequestParam Long id) {
+        List<ReviewModel> reviews = reviewService.findByProductId(id);
+        return ResponseEntity.ok(reviews);
+    }
+
     //deleteById
     @DeleteMapping(path = "/deleteById") //  http://localhost:8080/reviews/deleteById?userId=1&productId=1
     public String deleteById(

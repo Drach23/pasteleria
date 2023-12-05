@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -24,6 +25,11 @@ public class ReviewServices {
     public Optional<ReviewModel> findReviewById(ReviewModel.ReviewModelId reviewModelId) {
         return this.reviewRepository.findById(reviewModelId);
     }
+
+    public List<ReviewModel> findByProductId(Long productId) {
+        return reviewRepository.findByProductId(productId);
+    }
+
     //Eliminar una Review mediante el id
     public boolean deleteById(ReviewModel.ReviewModelId reviewModelId) {
         Optional<ReviewModel> optionalReview = reviewRepository.findById(reviewModelId);
