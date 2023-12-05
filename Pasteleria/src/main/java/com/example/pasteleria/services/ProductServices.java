@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -23,6 +24,11 @@ public class ProductServices {
     public ProductModel saveProduct(ProductModel product){
         return productRepository.save(product);
     }
+
+    public List<ProductModel> findByCategoriaId(Long categoriaId) {
+        return productRepository.findByCategoriaId(categoriaId);
+    }
+
     public Optional<ProductModel> findProductById(Long id){
         return productRepository.findById(id);
     }
